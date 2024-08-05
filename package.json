@@ -1,0 +1,27 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "a chat application with rooms built with node js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chat",
+    "chatroom",
+    "nodejs",
+    "express"
+  ],
+  "author": "TokenzKing <oguntadeemmanuel6@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "querystring": "^0.2.1",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
