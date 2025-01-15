@@ -28,10 +28,10 @@ io.on('connection', (socket) => {
          socket.join(userObject.room);
 
          // welcome message
-        socket.emit("message", formatMessage("ChatCord", "Welcome to my chat app!"))
+        socket.emit("message", formatMessage("Chimein", "Welcome to my chat app!"))
 
         //TODO: A NEW USER JOINED and this message appears to all users except him/her.
-        socket.broadcast.to(userObject.room).emit("message", formatMessage("ChatCord", 
+        socket.broadcast.to(userObject.room).emit("message", formatMessage("Chimein", 
                             `${userObject.username} just joined...`));
 
         let users = roomUsers(userObject.room);
@@ -50,7 +50,7 @@ io.on('connection', (socket) => {
         let userObject = removeUser(socket.id);
 
         if(userObject){
-            io.to(userObject.room).emit("message", formatMessage("ChatCord Bot",
+            io.to(userObject.room).emit("message", formatMessage("Chimein Bot",
                  `${userObject.username} just left...`));
                  // update the side bar information after a user disconnects
             io.to(userObject.room).emit('roomUsers', {room : userObject.room, users: roomUsers(userObject.room) });
